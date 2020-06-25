@@ -1,3 +1,6 @@
+// This code takes the LiveChatTranscript record ID as the input, queries for the record using SOQL, 
+// extracts the cfg_FirstName__c field from the record, and returns the first name as an output.
+
 public with sharing class CookbookBot_GetTranscriptVariables {
 
   public class TranscriptInput {
