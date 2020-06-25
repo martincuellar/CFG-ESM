@@ -1,0 +1,5 @@
+// This code snippet makes your web page responsive, so the web page and the embedded service look good on different devices. 
+// If your page is already responsive and has a meta tag, then you might not need to make any changes.
+// Add this code to the <meta> tag in the head section of each web page where you want the embedded service to be available
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
