@@ -21,14 +21,14 @@ public with sharing class CookbookBot_GetTranscriptVariables {
     for (TranscriptInput transcript : transcripts) {
     
       // Query for the transcript record based on the ID
-      LiveChatTranscript transcriptRecord = [SELECT Name, cfg_First_Name__c
+      LiveChatTranscript transcriptRecord = [SELECT Name, cfg_FirstName__c
                                              FROM LiveChatTranscript 
                                              WHERE Id = :transcript.routableID 
                                              LIMIT 1];
       
       // Store the first name in an output variable
       VisitorNameOutput nameData = new VisitorNameOutput();
-      nameData.sFirstName = transcriptRecord.cfg_First_Name__c;
+      nameData.sFirstName = transcriptRecord.cfg_FirstName__c;
       
       // Add the name to the list of outputs
       names.add(nameData);
