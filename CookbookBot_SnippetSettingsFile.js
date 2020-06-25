@@ -1,3 +1,5 @@
+// Populate the LiveChatTranscript record with pre-chat data
+
 window._snapinsSnippetSettingsFile = (function() {
 
   // Logs that the snippet settings file was loaded successfully
