@@ -21,7 +21,7 @@ public with sharing class CookbookBot_GetTranscriptVariables {
     for (TranscriptInput transcript : transcripts) {
     
       // Query for the transcript record based on the ID
-      LiveChatTranscript transcriptRecord = [SELECT Name, cfg_First_Name__c
+      LiveChatTranscript transcriptRecord = [SELECT Name, cfg_First_Name__c	
                                              FROM LiveChatTranscript 
                                              WHERE Id = :transcript.routableID 
                                              LIMIT 1];
