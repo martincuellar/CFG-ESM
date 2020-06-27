@@ -1,4 +1,4 @@
-// Populate the LiveChatTranscript record with pre-chat data
+// Populate the LiveChatTranscript record with pre-chat form data
 
 window._snapinsSnippetSettingsFile = (function() {
 
@@ -16,6 +16,6 @@ window._snapinsSnippetSettingsFile = (function() {
     "transcriptFields": ["cfg_Email__c"]
   },{
     "label":"Subject", 
-    "transcriptFields": ["cfg_Subject__c"]
+    "transcriptFields": ["cfg_Subject__c"]    
   }];
 })();
