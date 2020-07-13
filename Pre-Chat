@@ -1,0 +1,15 @@
+// Add to code snippet before the embedded_svc.init() method
+
+embedded_svc.settings.extraPrechatFormDetails = [{
+    "label":"First Name", 
+    "transcriptFields": ["cfg_First_Name__c"]
+  },{
+    "label":"Last Name", 
+    "transcriptFields": ["cfg_Last_Name__c"]
+  },{
+    "label":"Email", 
+    "transcriptFields": ["cfg_Email__c"]
+  },{
+    "label":"Subject", 
+    "transcriptFields": ["cfg_Subject__c"]    
+  }];
