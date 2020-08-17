@@ -1,6 +1,3 @@
-// This code snippet adds the embedded service to your web page. 
-// Paste this code immediately before the closing body tag (</body>) for each web page where you want the embedded service to be available
-
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #004473;
@@ -12,10 +9,9 @@
 </style>
 
 <!-- Start of Invitations -->
-<div class="embeddedServiceInvitation" id="snapins_invite" //inert="true" 
-aria-live="assertive" role="dialog" aria-atomic="true">
+<div class="embeddedServiceInvitation" id="snapins_invite" aria-live="assertive" role="dialog" aria-atomic="true">
 	<div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
-		<img id="embeddedServiceAvatar"></img>
+		<img id="embeddedServiceAvatar">
 		<span class="embeddedServiceTitleText" id="snapins_titletext">Need help?</span>
 		<button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>
 	</div>
@@ -75,15 +71,36 @@ aria-live="assertive" role="dialog" aria-atomic="true">
 			// Returns a valid button ID.
 		//};
 		embedded_svc.settings.prepopulatedPrechatFields = {
-			FirstName: chatFirstName,
-            		LastName: chatLastName,
-            		Email: chatEmail     
-		}; //Sets the auto-population of pre-chat form fields
+            FirstName: chatFirstName,
+            LastName: chatLastName,
+            Email: chatEmail         	
+        }; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
+      
+// Add to code snippet before the embedded_svc.init() method
+// embedded_svc.settings.extraPrechatFormDetails sets the default value and adds information to the chat transcript. 
+// The transcriptFields attribute specifies the field API name on the LiveChatTranscript object where the data is saved.
+
+embedded_svc.settings.extraPrechatFormDetails = [{
+    "label":"First Name", 
+    "transcriptFields": ["cfg_First_Name__c"]
+  },{
+    "label":"Last Name", 
+    "transcriptFields": ["cfg_Last_Name__c"]
+  },{
+    "label":"Email", 
+    "transcriptFields": ["cfg_Email__c"]
+  },{
+    "label":"Phone", 
+    "transcriptFields": ["cfg_Phone__c"]
+  },{  
+    "label":"Subject", 
+    "transcriptFields": ["cfg_Subject__c"]    
+  }];
 
 		embedded_svc.init(
 			'https://essmi.my.salesforce.com',
