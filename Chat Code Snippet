@@ -65,7 +65,7 @@
 		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 		
-		embedded_svc.settings.chatbotAvatarImgURL = “...” //(Einstein Bots Avatar)
+		embedded_svc.settings.chatbotAvatarImgURL = “https://essmi--c.na142.visual.force.com/resource/1597427062000/AgentAvatar” //(Einstein Bots Avatar)
 
 		// Settings for Chat
 		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
